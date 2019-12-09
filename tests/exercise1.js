@@ -3,6 +3,7 @@ module.exports = {
       browser
         .url('https://www.linkedin.com/?originalSubdomain=mx')
         .pause(2000)
+        .waitForElementVisible("nav>a:nth-of-type(2)[href*='https://www.linkedin.com/start/join']")
         .click("nav>a:nth-of-type(2)[href*='https://www.linkedin.com/start/join']") /* Click on Join now button*/ 
         .assert.containsText('h2.title', 'Make the most of your professional life')
         .click("form fieldset button") 
